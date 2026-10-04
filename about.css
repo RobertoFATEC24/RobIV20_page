@@ -366,6 +366,17 @@ body {
     width: 100%;
 }
 
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 22px 16px 20px;
