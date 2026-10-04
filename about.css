@@ -367,19 +367,121 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 22px 16px 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
+
+    .profile-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-info p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .navbar {
+        padding: 10px 12px 14px;
+    }
+
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 46px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .nav-item:last-child .nav-link {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 14px;
+    }
+
+    .card {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
     .about-info-grid,
     .about-favorites-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about-info-card,
+    .about-favorite-card {
+        padding: 14px 12px;
+    }
+
+    .about-bio {
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .about-info-grid,
-    .about-favorites-grid {
+    .header {
+        padding: 16px 12px 18px;
+    }
+
+    .profile-info h1 {
+        font-size: 2.1rem;
+    }
+
+    .profile-info p {
+        font-size: 0.96rem;
+    }
+
+    .nav-menu {
         grid-template-columns: 1fr;
     }
 
+    .nav-item:last-child .nav-link {
+        grid-column: auto;
+    }
+
+    .nav-link {
+        font-size: 0.96rem;
+    }
+
+    .about-section-title h2 {
+        font-size: 1.7rem;
+    }
+
     .about-bio {
-        gap: 12px;
+        gap: 10px;
     }
 }
