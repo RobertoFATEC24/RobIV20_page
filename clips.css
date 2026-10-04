@@ -1,0 +1,396 @@
+/* ================= CONFIGURAÇÃO GERAL ================= */
+/* EDITAR: Cores principais do site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background:
+        linear-gradient(135deg,
+            #1d1d2e,
+            #1d1d2e);
+    color: white;
+}
+
+/* ================= HEADER ================= */
+/* EDITAR: Área do perfil */
+.header {
+    background-image:
+        linear-gradient(rgba(17, 32, 21, 0.55), rgba(19, 17, 32, 0.55)),
+        url("images/brazil-7526288_1280.jpg");
+    height: 100%;
+    overflow: hidden;
+    color: #FFFFFF;
+    background-size: cover;
+    background-position: center;
+    padding: 35px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.profile-info h1 {
+    font-size: 40px;
+}
+
+.profile-info p {
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+/* EDITAR: Menu principal */
+.navbar {
+    background: #131120;
+    padding: 15px;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    background: #424899;
+}
+
+.nav-link.active {
+    background: #424899;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ================= CARDS ================= */
+/* EDITAR: Blocos de conteúdo */
+.card {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    background: #252525;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 0;
+    text-align: center;
+    transition: .3s;
+}
+
+.item-card:hover {
+    transform: translateY(-8px);
+    background: #424899;
+}
+
+/* ================= IMAGENS DOS CARDS ================= */
+/* EDITAR: Tamanho e aparência das imagens dos jogos */
+.item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.item-card img {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 2 / 3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #444;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+    transition: .3s;
+}
+
+.item-card img.button-logo {
+    width: 80%;
+    max-width: 155px;
+    height: 30px;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.logo-card {
+    min-height: 160px;
+    justify-content: center;
+    background: linear-gradient(135deg, #424899, #252525);
+    border: 1px solid #626bd1;
+}
+
+.logo-card:hover {
+    background: linear-gradient(135deg, #626bd1, #424899);
+}
+
+.item-card:hover img {
+    transform: scale(1.05);
+}
+
+.item-card span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ================= CLIPS AND SCREENSHOTS ================= */
+.media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 260px));
+}
+
+.youtube-item {
+    grid-column: span 2;
+}
+
+.screenshot-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+.media-item {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.youtube-item,
+.reels-item,
+.tiktok-item {
+    color: white;
+    text-decoration: none;
+}
+
+.youtube-item:hover {
+    border-color: #e53935;
+    background: #5e1d1dc9;
+}
+
+.youtube-item:focus-visible,
+.reels-item:focus-visible,
+.tiktok-item:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.media-preview,
+.screenshot-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    padding: 20px;
+    background-color: #171717;
+    background-image: linear-gradient(135deg, #262626 25%, transparent 25%),
+        linear-gradient(225deg, #262626 25%, transparent 25%),
+        linear-gradient(45deg, #262626 25%, transparent 25%),
+        linear-gradient(315deg, #262626 25%, #171717 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.media-preview {
+    aspect-ratio: 16 / 9;
+}
+
+.youtube-preview {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #e53935;
+}
+
+.youtube-thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reels-preview {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 9 / 16;
+    border-bottom: 3px solid #e97c24;
+}
+
+.reels-item:hover {
+    border-color: #e79325;
+    background: #a1581bd3;
+}
+
+.reels-thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tiktok-preview {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 9 / 16;
+    border-bottom: 3px solid #fafafa;
+}
+
+.tiktok-item:hover {
+    border-color: #fcfbfb;
+    background: #424899;
+}
+
+.tiktok-thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.screenshot-placeholder {
+    aspect-ratio: 16 / 10;
+}
+
+.screenshot-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.screenshot-item {
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.screenshot-item:hover,
+.screenshot-item:focus-within {
+    transform: translateY(-5px);
+    border-color: #fdfdfd;
+    background: #424899;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.screenshot-item:hover .screenshot-image,
+.screenshot-item:focus-within .screenshot-image {
+    transform: scale(1.04);
+}
+
+.media-details {
+    padding: 16px;
+}
+
+.media-details h3 {
+    margin: 5px 0 8px;
+    font-size: 18px;
+}
+
+.media-details p {
+    color: #c5c5c5;
+    line-height: 1.5;
+}
+
+.media-platform {
+    color: #b9bdf5;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* ================= FOOTER ================= */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+/* EDITAR: Ajustes para celulares */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 30px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .item-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .youtube-item {
+        grid-column: auto;
+    }
+}

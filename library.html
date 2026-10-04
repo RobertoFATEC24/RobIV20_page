@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="library.css">
+    <script src="library.js" defer></script>
+    <title>RobIV20 | Library</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="profile">
+            <img src="images/Profile.jpg" alt="RobIV20 Avatar" class="avatar">
+            <div class="profile-info">
+                <h1>RobIV20</h1>
+                <p>
+                    Born and raised in São Paulo, Brazil. I am a gamer who loves technology, motorsport, competitive
+                    challenges
+                    and game development.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link active">Library</a></li>
+                <li class="nav-item"><a href="clips.html" class="nav-link">Clips</a></li>
+                <li class="nav-item"><a href="plataforms.html" class="nav-link">Plataforms</a></li>
+                <li class="nav-item"><a href="socials.html" class="nav-link">Socials</a></li>
+                <li class="nav-item"><a href="setup.html" class="nav-link">PC Setup</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container"> 
+        <section class="card">
+            <h2>Game Library</h2>
+
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')">Show all</button>
+                <button class="btn" onclick="filterSelection('action')">Action</button>
+                <button class="btn" onclick="filterSelection('racing')">Racing</button>
+                <button class="btn" onclick="filterSelection('platformer')">Platformer</button>
+                <button class="btn" onclick="filterSelection('interative_movie')">Interactive Movie</button>
+            </div>
+
+            <div class="cards">
+                <div class="item-card filterDiv action">
+                    <img src="images/TF2.jpg" alt="Team Fortress 2">
+                    <span>Team Fortress 2</span>
+                </div>
+
+                <div class="item-card filterDiv racing">
+                    <img src="images/GT7.png" alt="Gran Turismo 7">
+                    <span>Gran Turismo 7</span>
+                </div>
+
+                <div class="item-card filterDiv racing">
+                    <img src="images/NFS_HP_Remaster.png" alt="Need for Speed: Hot Pursuit Remastered">
+                    <span>Need for Speed: Hot Pursuit Remastered</span>
+                </div>
+
+                <div class="item-card filterDiv action">
+                    <img src="images/TF_FOC.png" alt="Transformers: Fall of Cybertron">
+                    <span>Transformers: Fall of Cybertron</span>
+                </div>
+
+                <div class="item-card filterDiv racing">
+                    <img src="images/FH2.png" alt="Forza Horizon 2">
+                    <span>Forza Horizon 2</span>
+                </div>
+                
+                <div class="item-card filterDiv racing">
+                    <img src="images/F1_06.png" alt="F1 06">
+                    <span>F1 06</span>
+                </div>
+
+                <div class="item-card filterDiv action">
+                    <img src="images/GTA_IV.png" alt="GTA IV">
+                    <span>GTA IV</span>
+                </div>
+
+                <div class="item-card filterDiv platformer">
+                    <img src="images/SxS_Gen.png" alt="Sonic x Shadow Generations">
+                    <span>Sonic x Shadow Generations</span>
+                </div>
+
+                <div class="item-card filterDiv interative_movie">
+                    <img src="images/DBH.png" alt="Detroit Become Human">
+                    <span>Detroit Become Human</span>
+                </div>
+
+                <div class="item-card filterDiv racing">
+                    <img src="images/f1_2021.png" alt="F1 2021">
+                    <span>F1 2021</span>
+                </div>
+            </div>
+            <a class="library-link" href="https://backloggd.com/u/RobIV20/" target="_blank" 
+               rel="noopener noreferrer">My full game library</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 RobIV20 - Gaming Website</p>
+    </footer>
+</body>
+
+</html>

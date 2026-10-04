@@ -1,0 +1,173 @@
+.platforms-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.platforms-page .platforms-container {
+    flex: 1;
+    width: 100%;
+}
+
+.platforms-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.page-heading h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.page-heading p {
+    color: #c5c5c5;
+    line-height: 1.5;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.platform-card {
+    position: relative;
+    display: flex;
+    min-height: 240px;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.platform-card:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.xbox {
+    background-color: #193c20;
+    background-image: linear-gradient(90deg, rgba(9, 26, 13, 0.94), rgba(9, 26, 13, 0.58)),
+        url("https://wallpaper.dog/large/10716908.jpg");
+    background-position: center, center 55%;
+    background-size: cover;
+    border-top: 3px solid #7fb900;
+}
+
+.xbox:hover {
+    border-color: #7fb900;
+}
+
+.playstation {
+    background-color: #17365d;
+    background-image: linear-gradient(90deg, rgba(9, 22, 42, 0.94), rgba(9, 22, 42, 0.45)),
+        url("https://wallpaperaccess.com/full/812298.jpg");
+    background-position: center, -70% center;
+    background-size: cover;
+    border-top: 3px solid #3685df;
+    
+}
+
+.playstation:hover {
+    border-color: #3685df;
+}
+
+.steam {
+    background-color: #263747;
+    background-image: linear-gradient(90deg, rgba(15, 23, 31, 0.95), rgba(15, 23, 31, 0.55)),
+        url("images/Half-Life_Wallpaper.jpg");
+    background-position: center, center 35%;
+    background-size: cover;
+    border-top: 3px solid #66c0f4;
+}
+
+.steam:hover {
+    border-color: #66c0f4;
+}
+
+.platform-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.platform-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    transform: translateY(-10px); /* sobe */
+}
+
+.platform-logo-placeholder {
+    display: grid;
+    width: 180px;
+    max-width: 100%;
+    height: 48px;
+    place-items: center;
+    border: 1px dashed rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.platform-logo-image {
+    width: 180px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.platform-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.platform-avatar {
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.platform-profile h2 {
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.platform-profile p {
+    color: #d0d0d0;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-card {
+        min-height: 210px;
+    }
+}
